@@ -28,10 +28,9 @@
 
 .img-category {
   width: 40%; 
-  margin-top: 40rpx;
   animation: 0.5s slide-bottom;
   position: absolute;
-  bottom: 20%;
+  bottom: 23%;
   z-index: 20;
 }
 
@@ -87,11 +86,12 @@
   display: flex;
   align-items: center;
   padding: 20rpx 40rpx;
-  background-color: green;
-  border-radius: 40rpx;
+  background-color: #FFC70F;  
+  border-radius: 80rpx;
   color: white;
   bottom: 10%;
   position: absolute;
+  font-size: 38rpx;
 }
 
 .btn-back image {

@@ -17,7 +17,7 @@
     <image src="{{garbageImgUrl}}" mode="widthFix" class="img-category animated infinite pulse" wx:if="{{garbageImgUrl && !cameraOn}}"></image>
 
     <view class="btn-back" bindtap="openCamera" wx:if="{{!cameraOn}}">
-      <image src="/images/camera.svg"></image>
+      <image src="/images/camera.png"></image>
       <text>继续识别</text>
     </view>
 
