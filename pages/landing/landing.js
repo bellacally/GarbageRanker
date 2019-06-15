@@ -45,8 +45,14 @@ Page({
    */
   onShow: function () {
     wx.request({
-      url: 'http://localhost:3000/uploadpic',
-      method: 'POST', 
+      url: 'http://localhost:3000/upload?imgUrl=https://cloud-minapp-28140.cloud.ifanrusercontent.com/1hc4YSm10Iwm8jeu.jpg',
+      method: 'POST',
+      header: {
+        'content-type': 'application/json'
+      },
+      data: {
+        imgUrl: 'https://cloud-minapp-28140.cloud.ifanrusercontent.com/1hc4YSm10Iwm8jeu.jpg'
+      },
       success(res) {
         console.log(res)
       }
