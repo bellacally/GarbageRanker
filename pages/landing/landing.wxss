@@ -1,12 +1,27 @@
+page{
+  background-color: #44364d;
+}
 .container{
   align-items: center;
   font-size: 50rpx;
   font-weight: bold;
+  height: 100vh;
+  background-position:center;
+}
+.brand-info{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 60rpx;
+  margin-top:100rpx;
 }
 
 #logo{
-height:100rpx;
-width:100rpx;
+height:60rpx;
+width:60rpx;
+}
+.background-img{
+  width: 80%;
+  margin-top: 80rpx;
 }
 
 #cover_pic{
@@ -18,29 +33,31 @@ width:100rpx;
 }
 
 .headline{
-  margin: 0 auto;
-  margin-top: 50rpx;
   color: white;
 }
-button{
-  margin-top:200rpx;
+.color{
+  color: #8A7090;
+}
+.btn-cta{
+  margin-top: 60rpx;
   background-color:#52CF51;
   color: white;
   display:flex;
-  flex-direction:center;
   align-items:center;
+  padding: 20rpx 40rpx;
+  border-radius: 80rpx;
+  font-size: 38rpx;
 }
 
 .subtitle{
   font-family: 'Circular Black';
-  font-size: 35rpx;
-  padding:20rpx;
+  font-size: 55rpx;
   color: white;
 }
 image{
   height: 50rpx;
   width: 50rpx;
-
+  margin-right: 20rpx;
 }
 
 .cta_upload{
