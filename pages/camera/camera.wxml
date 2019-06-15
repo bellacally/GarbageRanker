@@ -1,7 +1,7 @@
 <view class="container">
   <camera device-position="back" flash="off" binderror="error" style="width: 100%; height: 100vh;" wx:if="{{cameraOn}}">
     <cover-view class="focus-container">
-      <cover-image src='/images/frame.png' id='focus-frame'></cover-image>
+      <cover-image src='/images/frame2.png' id='focus-frame'></cover-image>
     </cover-view>
     <cover-view class='shutter-container'>
       <cover-image src='/images/shutter.png' id='btn-shutter'  bindtap="shutterClicked"></cover-image>
