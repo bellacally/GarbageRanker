@@ -1,12 +1,25 @@
+page{
+  background-color: #f2eaea;
+}
 .container{
   align-items: center;
   font-size: 50rpx;
   font-weight: bold;
+  height: 100vh;
+  background-position:center;
 }
-
+.brand-info{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 60rpx;
+}
 #logo{
-height:100rpx;
-width:100rpx;
+height:60rpx;
+width:60rpx;
+}
+.background-img{
+  height: 1200rpx;
+  width: 100vw;
 }
 
 #cover_pic{
@@ -18,9 +31,14 @@ width:100rpx;
 }
 
 .headline{
-  margin: 0 auto;
-  margin-top: 50rpx;
+  margin-left:20rpx;
   color: white;
+}
+#color-one{
+  color: #8A7090;
+}
+#color-two{
+  color: #8A7090;
 }
 button{
   margin-top:200rpx;
@@ -33,7 +51,7 @@ button{
 
 .subtitle{
   font-family: 'Circular Black';
-  font-size: 35rpx;
+  font-size: 55rpx;
   padding:20rpx;
   color: white;
 }
