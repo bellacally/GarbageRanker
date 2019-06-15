@@ -1,3 +1,4 @@
+
 #btn-shutter {
   width: 120rpx;
   height: 120rpx;
@@ -15,3 +16,4 @@
   top: 45%;
   transform: translate(-50%, -50%);
 }
+

@@ -1,3 +1,4 @@
+
 Page({
   data: {
     cameraOn: true
@@ -18,5 +19,6 @@ Page({
         // })
       }
     })
+
   }
 })
