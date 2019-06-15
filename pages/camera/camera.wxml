@@ -12,11 +12,11 @@
     <image src="{{imgUrl}}" mode="widthFix" class="photo-garbage" wx:if="{{imgUrl && !cameraOn}}">
     </image>
 
-    <view class="photo-layer" wx:if="{{imgUrl && !cameraOn}}"></view>
+    <view class="photo-layer" hidden="{{!showRetake}}"></view>
     
     <image src="{{iconUrl}}" mode="widthFix" class="img-category animated infinite pulse" wx:if="{{iconUrl && !cameraOn}}"></image>
 
-    <view class="btn-back" bindtap="openCamera" wx:if="{{!cameraOn}}">
+    <view class="btn-back" bindtap="retakePhoto" hidden="{{!showRetake}}">
       <image src="/images/camera.png"></image>
       <text>继续识别</text>
     </view>
