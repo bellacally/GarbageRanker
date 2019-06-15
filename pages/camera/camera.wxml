@@ -18,6 +18,5 @@
     <image src="/images/camera.svg"></image>
     <text>继续识别</text>
   </view>
-
-
 </view> 
+{{result}}

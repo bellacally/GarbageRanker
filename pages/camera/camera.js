@@ -9,7 +9,8 @@ Page({
       { name: "recyclable", audioSrc: "/audios/recyclable.mp3" },
       { name: "hazardous", audioSrc: "/audios/hazardous.mp3" },
     ],
-    garbageImgUrl: ''
+    garbageImgUrl: '', 
+    result: ''
   },
 
   shutterClicked: function() {
@@ -38,6 +39,7 @@ Page({
   },
 
   classifyImage: function(imgPath) {
+    let self = this
     wx.request({
       url: 'http://localhost:3000/upload?imgUrl=https://cloud-minapp-28140.cloud.ifanrusercontent.com/1hc4YSm10Iwm8jeu.jpg',
       method: 'POST',
@@ -49,6 +51,9 @@ Page({
       },
       success(res) {
         console.log(res)
+        self.setData({
+          result: res.data.images[0].classifiers[0].classes[0].class
+        })
       }
     })
   },
