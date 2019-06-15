@@ -1,0 +1,6 @@
+<camera device-position="back" flash="off" binderror="error" style="width: 100%; height: 100vh;" wx:if="{{cameraOn}}">
+  <cover-image src='/images/frame.svg' id='focus-frame'></cover-image>
+  <cover-image src='/images/shutter.svg' id='btn-shutter'  bindtap="shutterClicked"></cover-image>
+</camera>
+
+<image src="{{imgUrl}}" mode="widthFix" style="width: 100%" wx:if="{{imgUrl && !cameraOn}}"></image>
