@@ -5,13 +5,16 @@
     <text class="headline">GarbageRanker </text>
   </view>
   <view class="subtitle">
-    <text id="color-one">轻松</text>
+    <text class="color">轻松</text>
     <text>解决</text>
   </view>
   <view class="subtitle">
    <text>你的垃圾 </text>
-  <text id="color-two">分类问题 </text>
+  <text class="color">分类问题 </text>
   </view>
  <image class="background-img" src="/images/home-bg.png" mode='widthFix'></image>
-  <button  bindtap="takePic"><image src="https://cloud-minapp-28142.cloud.ifanrusercontent.com/1hc2mWp86yVHthFK.png"></image>Take a picture </button>
+  <view bindtap="takePic" class='btn-cta'>
+    <image src="https://cloud-minapp-28142.cloud.ifanrusercontent.com/1hc7XBEMYnysTFhH.png"></image>
+    <view>垃圾识别</view>
+  </view>
   </view>

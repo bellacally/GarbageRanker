@@ -21,6 +21,7 @@ width:60rpx;
 }
 .background-img{
   width: 80%;
+  margin-top: 80rpx;
 }
 
 #cover_pic{
@@ -32,22 +33,20 @@ width:60rpx;
 }
 
 .headline{
-  margin-left:20rpx;
   color: white;
 }
-#color-one{
+.color{
   color: #8A7090;
 }
-#color-two{
-  color: #8A7090;
-}
-button{
-  margin-top:100rpx;
+.btn-cta{
+  margin-top: 60rpx;
   background-color:#52CF51;
   color: white;
   display:flex;
-  flex-direction:center;
   align-items:center;
+  padding: 20rpx 40rpx;
+  border-radius: 80rpx;
+  font-size: 38rpx;
 }
 
 .subtitle{
@@ -58,7 +57,7 @@ button{
 image{
   height: 50rpx;
   width: 50rpx;
-
+  margin-right: 20rpx;
 }
 
 .cta_upload{
