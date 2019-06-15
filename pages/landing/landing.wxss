@@ -20,21 +20,22 @@ width:100rpx;
 .headline{
   margin: 0 auto;
   margin-top: 50rpx;
+  color: white;
 }
 button{
-  margin-top:40rpx;
+  margin-top:200rpx;
   background-color:#52CF51;
   color: white;
   display:flex;
   flex-direction:center;
   align-items:center;
-
 }
 
 .subtitle{
   font-family: 'Circular Black';
   font-size: 35rpx;
   padding:20rpx;
+  color: white;
 }
 image{
   height: 50rpx;

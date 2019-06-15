@@ -13,6 +13,7 @@ Page({
    */
   onLoad: function (options) {
 
+
   },
   takePic: function () {
     wx.redirectTo({
@@ -20,20 +21,21 @@ Page({
     });
    
   },
-  uploadPic: function () {
-    // wx.redirectTo({
-    //   url: "../camera/camera"
-    // });
-    wx.chooseImage({
-      count: 1,
-      sizeType: ['original', 'compressed'],
-      sourceType: ['album'],
-      success(res) {
-        // tempFilePath可以作为img标签的src属性显示图片
-        const tempFilePaths = res.tempFilePaths
-      }
-    })
-  },
+  // uploadPic: function () {
+  //   // wx.redirectTo({
+  //   //   url: "../camera/camera"
+  //   // });
+  //   wx.chooseImage({
+  //     count: 1,
+  //     sizeType: ['original', 'compressed'],
+  //     sourceType: ['album'],
+  //     success(res) {
+  //       // tempFilePath可以作为img标签的src属性显示图片
+  //       const tempFilePaths = res.tempFilePaths
+  //     }
+  //   })
+  // },
+  
   /**
    * Lifecycle function--Called when page is initially rendered
    */
