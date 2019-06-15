@@ -34,5 +34,11 @@ Page({
         audio.src = trashCategories[0].audioSrc;
       }
     })
+  },
+
+  openCamera: function () {
+    this.setData({
+      cameraOn: true
+    })
   }
 })

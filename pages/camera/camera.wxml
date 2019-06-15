@@ -1,17 +1,19 @@
 <view class="container">
+  <camera device-position="back" flash="off" binderror="error" style="width: 100%; height: 100vh;" wx:if="{{cameraOn}}">
+    <cover-view class="focus-container">
+      <cover-image src='/images/frame.svg' id='focus-frame'></cover-image>
+    </cover-view>
+    <cover-view class='shutter-container'>
+      <cover-image src='/images/shutter.svg' id='btn-shutter'  bindtap="shutterClicked"></cover-image>
+    </cover-view>
+  </camera>
 
-<camera device-position="back" flash="off" binderror="error" style="width: 100%; height: 100vh;" wx:if="{{cameraOn}}">
-  <cover-view bindtap="shutterClicked">拍照</cover-view>
-  <cover-view>
-    <cover-image src='/images/frame.png' id='focus-frame'></cover-image>
-  </cover-view>
-  <cover-view>
-    <cover-image src='/images/shutter.png' id='btn-shutter'  bindtap="shutterClicked"></cover-image>
-  </cover-view>
-</camera>
+  <image src="{{imgUrl}}" mode="widthFix" class="photo-garbage" wx:if="{{imgUrl && !cameraOn}}"></image>
 
-<image src="{{imgUrl}}" mode="widthFix" style="width: 70%; margin: 0 auto;" wx:if="{{imgUrl && !cameraOn}}"></image>
+  <image src="{{garbageImgUrl}}" mode="widthFix" class="img-category" wx:if="{{garbageImgUrl && !cameraOn}}"></image>
 
-<image src="{{garbageImgUrl}}" mode="widthFix" class="img-garbage" wx:if="{{garbageImgUrl && !cameraOn}}"></image>
-
+  <view class="btn-back" bindtap="openCamera" wx:if="{{!cameraOn}}">
+    <image src="/images/camera.svg"></image>
+    <text>继续识别</text>
+  </view>
 </view> 
