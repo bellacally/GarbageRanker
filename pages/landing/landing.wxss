@@ -2,7 +2,11 @@
   align-items: center;
   font-size: 50rpx;
   font-weight: bold;
- 
+}
+
+#logo{
+height:100rpx;
+width:100rpx;
 }
 
 #cover_pic{
@@ -13,17 +17,33 @@
   height: 100vh;
 }
 
-.title{
+.headline{
   margin: 0 auto;
-}
-.cta_primary{
-  margin-top:150rpx;
-
-}
-.line{
-  font-family: 'Circular Black';
-  font-size: 60rpx;
+  margin-top: 50rpx;
   color: white;
-  padding-bottom:10rpx;
+}
+button{
+  margin-top:200rpx;
+  background-color:#52CF51;
+  color: white;
+  display:flex;
+  flex-direction:center;
+  align-items:center;
 }
 
+.subtitle{
+  font-family: 'Circular Black';
+  font-size: 35rpx;
+  padding:20rpx;
+  color: white;
+}
+image{
+  height: 50rpx;
+  width: 50rpx;
+
+}
+
+.cta_upload{
+  display: flex;
+  flex-direction: row;
+}
