@@ -1,3 +1,4 @@
+let MyFile = new wx.BaaS.File()
 
 Page({
   data: {
@@ -13,7 +14,7 @@ Page({
 
   shutterClicked: function() {
     let page = this;
-    let trashCategories = page.data.trashCategories
+    let trashCategories = page.data.trashCategories;
     let camera = wx.createCameraContext();
     let audio = wx.createInnerAudioContext(); 
     camera.takePhoto({
@@ -24,8 +25,13 @@ Page({
           imgUrl: res.tempImagePath,
           garbageImgUrl: trashCategories[0].garbageImgUrl
         })
-        audio.autoplay = true
-        audio.src = trashCategories[0].audioSrc
+        let fileParams = { filePath: res.tempImagePath };
+        let metaData = { categoryName: 'Garbage' };
+        MyFile.upload(fileParams, metaData).then(res => {
+          console.log(res)
+        })
+        audio.autoplay = true;
+        audio.src = trashCategories[0].audioSrc;
       }
     })
   }
