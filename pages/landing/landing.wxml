@@ -1,11 +1,9 @@
 <view id="cover_pic" style="background-image: linear-gradient(#fff,rgba(1,100,180,0.2),rgba(0,0,0,0.2) 70%), url('https://cloud-minapp-28142.cloud.ifanrusercontent.com/1hc0pLT3SsHDOgd5.jpg'); background-size:cover; ">
 
   <view class="container">
-    <text class="line">
-      Learn to sort </text>
-    <text class="line">Make an impact</text>
-    <button class='cta_primary' open-type="getUserInfo" bindgetuserinfo="getUserInfo">
-     start small
-    </button>
-  </view>
-  </view>
+    <image id="logo" src="https://cloud-minapp-28142.cloud.ifanrusercontent.com/1hc31SAPT5gTT9F9.png"></image>
+    <text class="headline">GarbageRanker 易丢丢 </text>
+    <text class="subtitle">轻松解决你的垃圾分类问题 </text>
+      <button  bindtap="takePic"><image src="https://cloud-minapp-28142.cloud.ifanrusercontent.com/1hc2mWp86yVHthFK.png"></image>Take a picture </button>
+    </view>
+    </view>
