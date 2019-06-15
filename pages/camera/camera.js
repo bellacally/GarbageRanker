@@ -40,14 +40,15 @@ Page({
 
   classifyImage: function(imgPath) {
     let self = this
+    let url = 'http://localhost:3000/upload?imgPath=' + imgPath
     wx.request({
-      url: 'http://localhost:3000/upload?imgUrl=https://cloud-minapp-28140.cloud.ifanrusercontent.com/1hc4YSm10Iwm8jeu.jpg',
+      url: url,
       method: 'POST',
       header: {
         'content-type': 'application/json'
       },
       data: {
-        imgUrl: ''
+        imgUrl: imgPath
       },
       success(res) {
         console.log(res)
@@ -60,7 +61,8 @@ Page({
 
   openCamera: function () {
     this.setData({
-      cameraOn: true
+      cameraOn: true, 
+      result: ''
     })
   }
 })
