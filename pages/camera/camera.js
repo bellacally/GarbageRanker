@@ -3,16 +3,17 @@ Page({
   data: {
     cameraOn: true,
     trashCategories: [
-      { name: "dry", src: "/audios/dry.mp3",  },
-      { name: "wet", src: "/audios/wet.mp3" },
-      { name: "recyclable", src: "/audios/recyclable.mp3" },
-      { name: "hazardous", src: "/audios/hazardous.mp3" },
-    ]
+      { name: "dry", audioSrc: "/audios/dry.mp3", garbageImgUrl: "/images/hazardous.png" },
+      { name: "wet", audioSrc: "/audios/wet.mp3" },
+      { name: "recyclable", audioSrc: "/audios/recyclable.mp3" },
+      { name: "hazardous", audioSrc: "/audios/hazardous.mp3" },
+    ],
+    garbageImgUrl: ''
   },
 
   shutterClicked: function() {
     let page = this;
-    let audioList = page.data.audioList
+    let trashCategories = page.data.trashCategories
     let camera = wx.createCameraContext();
     let audio = wx.createInnerAudioContext(); 
     camera.takePhoto({
@@ -20,10 +21,11 @@ Page({
       success: (res) => {
         page.setData({
           cameraOn: false,
-          imgUrl: res.tempImagePath
+          imgUrl: res.tempImagePath,
+          garbageImgUrl: trashCategories[0].garbageImgUrl
         })
         audio.autoplay = true
-        audio.src = trashCategories[0].src
+        audio.src = trashCategories[0].audioSrc
       }
     })
   }

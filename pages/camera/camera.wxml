@@ -10,6 +10,8 @@
   </cover-view>
 </camera>
 
-<image src="{{imgUrl}}" mode="widthFix" style="width: 70%; margin: 0 auto;" wx:if="{{imgUrl && !cameraOn}}" class='img-garbage'></image>
+<image src="{{imgUrl}}" mode="widthFix" style="width: 70%; margin: 0 auto;" wx:if="{{imgUrl && !cameraOn}}"></image>
+
+<image src="{{garbageImgUrl}}" mode="widthFix" class="img-garbage" wx:if="{{garbageImgUrl && !cameraOn}}"></image>
 
 </view> 
