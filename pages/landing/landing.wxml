@@ -1,6 +1,5 @@
-<!-- <view class="container" style="background-image: linear-gradient(#fff,rgba(1,100,180,0.2),rgba(0,0,0,0.2) 70%), url('https://cloud-minapp-28142.cloud.ifanrusercontent.com/1hc65OM9nf3z0LSJ.jpg');"> -->
 <view class="container">
-    <view class="brand-info">
+  <view class="brand-info">
     <image id="logo" src="https://cloud-minapp-28142.cloud.ifanrusercontent.com/1hc31SAPT5gTT9F9.png"></image>
     <text class="headline">GarbageRanker </text>
   </view>
@@ -12,9 +11,9 @@
    <text>你的垃圾 </text>
   <text class="color">分类问题 </text>
   </view>
- <image class="background-img" src="/images/home-bg.png" mode='widthFix'></image>
+  <image class="background-img" src="/images/home-bg.png" mode='widthFix'></image>
   <view bindtap="takePic" class='btn-cta'>
-    <image src="https://cloud-minapp-28142.cloud.ifanrusercontent.com/1hc7XBEMYnysTFhH.png"></image>
+    <image src="/images/camera.png"></image>
     <view>垃圾识别</view>
   </view>
-  </view>
+</view>

@@ -40,7 +40,7 @@ width:60rpx;
 }
 .btn-cta{
   margin-top: 60rpx;
-  background-color:#52CF51;
+  background-color: #FFC70F;
   color: white;
   display:flex;
   align-items:center;

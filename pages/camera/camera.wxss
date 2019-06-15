@@ -1,3 +1,7 @@
+.container {
+  position: relative;
+}
+
 .focus-container {
   position: absolute;
   left: 50%;
@@ -23,40 +27,106 @@
 }
 
 .img-category {
-  width: 20%; 
-  margin-top: 40rpx;
+  width: 40%; 
   animation: 0.5s slide-bottom;
+  position: absolute;
+  bottom: 23%;
+  z-index: 20;
+}
+
+.animated {
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+}
+
+.infinite {
+  animation-iteration-count: infinite;
+}
+
+.pulse {
+  animation-name: pulse;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
 }
 
 @keyframes slide-bottom {
   0% {
-      opacity: 0;
-      transform: translateY(100%)
+    opacity: 0;
+    transform: translateY(100%)
   }
 
   100% {
-      opacity: 1;
-      transform: translateY(0)
+    opacity: 1;
+    transform: translateY(0)
   }
 }
 
+.img-container {
+  width: 100%;
+  position: relative;
+}
+
 .photo-garbage {
-  width: 70%; 
-  margin: 0 auto;
-  border-radius: 2%;
+  width: 100%; 
 }
 
 .btn-back {
   display: flex;
   align-items: center;
   padding: 20rpx 40rpx;
-  background-color: green;
-  border-radius: 40rpx;
+  background-color: #FFC70F;  
+  border-radius: 80rpx;
   color: white;
+  bottom: 10%;
+  position: absolute;
+  font-size: 38rpx;
 }
 
 .btn-back image {
   width: 50rpx; 
   height: 50rpx;
   margin-right: 10rpx;
+}
+
+.photo-layer {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+
+.toast {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  height: 25vh;
+  background-color:rgba(0, 0, 0, 0.45);
+  color: white;
+  border-radius: 5%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 36rpx;
+}
+
+.toast image {
+  width: 150rpx;
+  height: 150rpx;
+  margin-bottom: 20rpx;
 }

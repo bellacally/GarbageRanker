@@ -4,36 +4,33 @@ Page({
   data: {
     cameraOn: true,
     trashCategories: [
-      { name: "dry", audioSrc: "/audios/dry.mp3", garbageImgUrl: "/images/hazardous2.png" },
-      { name: "wet", audioSrc: "/audios/wet.mp3" },
-      { name: "recyclable", audioSrc: "/audios/recyclable.mp3" },
-      { name: "hazardous", audioSrc: "/audios/hazardous.mp3" },
+      { name: "干垃圾", audioSrc: "/audios/dry.mp3", iconUrl: "/images/dry.png" },
+      { name: "湿垃圾", audioSrc: "/audios/wet.mp3", iconUrl: "/images/wet.png" },
+      { name: "可回收垃圾", audioSrc: "/audios/recyclable.mp3", iconUrl: "/images/recyclable.png" },
+      { name: "有害垃圾", audioSrc: "/audios/hazardous.mp3", iconUrl: "/images/hazardous2.png" },
     ],
-    garbageImgUrl: '', 
-    result: ''
+    iconUrl: '',
+    showToast: false
   },
 
   shutterClicked: function() {
     let page = this;
     let trashCategories = page.data.trashCategories;
     let camera = wx.createCameraContext();
-    let audio = wx.createInnerAudioContext(); 
     camera.takePhoto({
       quality: 'high',
       success: (res) => {
         page.setData({
           cameraOn: false,
           imgUrl: res.tempImagePath,
-          garbageImgUrl: trashCategories[0].garbageImgUrl
+          showToast: true
         })
         let fileParams = { filePath: res.tempImagePath };
         let metaData = { categoryName: 'Garbage' };
         MyFile.upload(fileParams, metaData).then(res => {
           let imgPath = res.data.path
-          page.classifyImage(imgPath)
+          page.classifyImage(imgPath);
         })
-        audio.autoplay = true;
-        audio.src = trashCategories[0].audioSrc;
       }
     })
   },
@@ -51,10 +48,17 @@ Page({
         imgUrl: imgPath
       },
       success(res) {
-        console.log(res)
+        let result = res.data.images[0].classifiers[0].classes[0].class
+        let garbageCategory = self.data.trashCategories.find(t => (t.name === result))
         self.setData({
-          result: res.data.images[0].classifiers[0].classes[0].class
+          iconUrl: garbageCategory.iconUrl
         })
+        self.setData({
+          showToast: false
+        })
+        wx.hideToast();
+        let audioSrc = garbageCategory.audioSr
+        self.playAudio(audioSrc);
       }
     })
   },
@@ -62,7 +66,14 @@ Page({
   openCamera: function () {
     this.setData({
       cameraOn: true, 
-      result: ''
+      result: '',
+      iconUrl: ''
     })
+  },
+
+  playAudio: function(audioPath) {
+    let audio = wx.createInnerAudioContext(); 
+    audio.autoplay = true;
+    audio.src = audioPath;
   }
 })
