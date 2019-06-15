@@ -10,7 +10,9 @@ Page({
       { name: "有害垃圾", audioSrc: "/audios/hazardous.mp3", iconUrl: "/images/hazardous2.png" },
     ],
     iconUrl: '',
-    showToast: false
+    imgUrl: '',
+    showToast: false,
+    showRetake: false
   },
 
   shutterClicked: function() {
@@ -48,26 +50,28 @@ Page({
         imgUrl: imgPath
       },
       success(res) {
+        console.log(res)
         let result = res.data.images[0].classifiers[0].classes[0].class
         let garbageCategory = self.data.trashCategories.find(t => (t.name === result))
         self.setData({
           iconUrl: garbageCategory.iconUrl
         })
         self.setData({
-          showToast: false
+          showToast: false,
+          showRetake: true,
         })
-        wx.hideToast();
         let audioSrc = garbageCategory.audioSr
         self.playAudio(audioSrc);
       }
     })
   },
 
-  openCamera: function () {
+  retakePhoto: function () {
     this.setData({
       cameraOn: true, 
-      result: '',
-      iconUrl: ''
+      iconUrl: '',
+      showRetake: false,
+      imgUrl: ''
     })
   },
 
