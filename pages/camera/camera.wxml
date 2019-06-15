@@ -14,11 +14,15 @@
 
     <view class="photo-layer" wx:if="{{imgUrl && !cameraOn}}"></view>
     
-    <image src="{{garbageImgUrl}}" mode="widthFix" class="img-category animated infinite pulse" wx:if="{{garbageImgUrl && !cameraOn}}"></image>
+    <image src="{{iconUrl}}" mode="widthFix" class="img-category animated infinite pulse" wx:if="{{iconUrl && !cameraOn}}"></image>
 
     <view class="btn-back" bindtap="openCamera" wx:if="{{!cameraOn}}">
       <image src="/images/camera.png"></image>
       <text>继续识别</text>
     </view>
+
+    <view class='toast' hidden="{{!showToast}}">
+      <image src='/images/animat-rocket-color.gif'></image>
+      <text>垃圾识别中</text>
+    </view>
 </view> 
-{{result}}
