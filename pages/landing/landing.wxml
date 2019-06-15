@@ -1,9 +1,17 @@
-<view id="cover_pic" style="background-image: linear-gradient(#fff,rgba(1,100,180,0.2),rgba(0,0,0,0.2) 70%), url('https://cloud-minapp-28142.cloud.ifanrusercontent.com/1hc0pLT3SsHDOgd5.jpg'); background-size:cover; ">
-
-  <view class="container">
+<!-- <view class="container" style="background-image: linear-gradient(#fff,rgba(1,100,180,0.2),rgba(0,0,0,0.2) 70%), url('https://cloud-minapp-28142.cloud.ifanrusercontent.com/1hc65OM9nf3z0LSJ.jpg');"> -->
+<view class="container">
+    <view class="brand-info">
     <image id="logo" src="https://cloud-minapp-28142.cloud.ifanrusercontent.com/1hc31SAPT5gTT9F9.png"></image>
-    <text class="headline">GarbageRanker 易丢丢 </text>
-    <text class="subtitle">轻松解决你的垃圾分类问题 </text>
-      <button  bindtap="takePic"><image src="https://cloud-minapp-28142.cloud.ifanrusercontent.com/1hc2mWp86yVHthFK.png"></image>Take a picture </button>
-    </view>
-    </view>
+    <text class="headline">GarbageRanker </text>
+  </view>
+  <view class="subtitle">
+    <text id="color-one">轻松</text>
+    <text>解决</text>
+  </view>
+  <view class="subtitle">
+   <text>你的垃圾 </text>
+  <text id="color-two">分类问题 </text>
+  </view>
+ <image class="background-img" src="/images/home-bg.png" mode='widthFix'></image>
+  <button  bindtap="takePic"><image src="https://cloud-minapp-28142.cloud.ifanrusercontent.com/1hc2mWp86yVHthFK.png"></image>Take a picture </button>
+  </view>
