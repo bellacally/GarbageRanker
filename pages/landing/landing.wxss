@@ -1,5 +1,5 @@
 page{
-  background-color: #f2eaea;
+  background-color: #44364d;
 }
 .container{
   align-items: center;
@@ -12,14 +12,15 @@ page{
   display: flex;
   flex-direction: row;
   margin-bottom: 60rpx;
+  margin-top:100rpx;
 }
+
 #logo{
 height:60rpx;
 width:60rpx;
 }
 .background-img{
-  height: 1200rpx;
-  width: 100vw;
+  width: 80%;
 }
 
 #cover_pic{
@@ -41,7 +42,7 @@ width:60rpx;
   color: #8A7090;
 }
 button{
-  margin-top:200rpx;
+  margin-top:100rpx;
   background-color:#52CF51;
   color: white;
   display:flex;
@@ -52,7 +53,6 @@ button{
 .subtitle{
   font-family: 'Circular Black';
   font-size: 55rpx;
-  padding:20rpx;
   color: white;
 }
 image{

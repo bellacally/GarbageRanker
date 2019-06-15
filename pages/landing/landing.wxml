@@ -12,6 +12,6 @@
    <text>你的垃圾 </text>
   <text id="color-two">分类问题 </text>
   </view>
- <image class="background-img" src="https://cloud-minapp-28142.cloud.ifanrusercontent.com/1hc65OM9nf3z0LSJ.jpg"></image>
+ <image class="background-img" src="/images/home-bg.png" mode='widthFix'></image>
   <button  bindtap="takePic"><image src="https://cloud-minapp-28142.cloud.ifanrusercontent.com/1hc2mWp86yVHthFK.png"></image>Take a picture </button>
   </view>
