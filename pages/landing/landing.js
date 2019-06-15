@@ -17,22 +17,22 @@ Page({
     wx.redirectTo({
       url: "../camera/camera"
     }); 
+  },
+  // uploadPic: function () {
+  //   // wx.redirectTo({
+  //   //   url: "../camera/camera"
+  //   // });
+  //   wx.chooseImage({
+  //     count: 1,
+  //     sizeType: ['original', 'compressed'],
+  //     sourceType: ['album'],
+  //     success(res) {
+  //       // tempFilePath可以作为img标签的src属性显示图片
+  //       const tempFilePaths = res.tempFilePaths
+  //     }
+  //   })
+  // },
   
-  },
-  uploadPic: function () {
-    // wx.redirectTo({
-    //   url: "../camera/camera"
-    // });
-    wx.chooseImage({
-      count: 1,
-      sizeType: ['original', 'compressed'],
-      sourceType: ['album'],
-      success(res) {
-        // tempFilePath可以作为img标签的src属性显示图片
-        const tempFilePaths = res.tempFilePaths
-      }
-    })
-  },
   /**
    * Lifecycle function--Called when page is initially rendered
    */
@@ -43,21 +43,7 @@ Page({
   /**
    * Lifecycle function--Called when page show
    */
-  onShow: function () {
-    wx.request({
-      url: 'http://localhost:3000/upload?imgUrl=https://cloud-minapp-28140.cloud.ifanrusercontent.com/1hc4YSm10Iwm8jeu.jpg',
-      method: 'POST',
-      header: {
-        'content-type': 'application/json'
-      },
-      data: {
-        imgUrl: 'https://cloud-minapp-28140.cloud.ifanrusercontent.com/1hc4YSm10Iwm8jeu.jpg'
-      },
-      success(res) {
-        console.log(res)
-      }
-    })
-  },
+  onShow: function () {},
 
   /**
    * Lifecycle function--Called when page hide

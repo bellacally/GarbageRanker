@@ -5,8 +5,5 @@
     <text class="headline">GarbageRanker 易丢丢 </text>
     <text class="subtitle">轻松解决你的垃圾分类问题 </text>
       <button  bindtap="takePic"><image src="https://cloud-minapp-28142.cloud.ifanrusercontent.com/1hc2mWp86yVHthFK.png"></image>Take a picture </button>
-      <button class='cta_scan' bindtap="uploadPic">
-    Upload a picture
-      </button>
     </view>
     </view>

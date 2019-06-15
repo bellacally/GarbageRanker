@@ -1,7 +1,16 @@
+.focus-container {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+}
 
 #btn-shutter {
   width: 120rpx;
   height: 120rpx;
+}
+
+.shutter-container {
   position: absolute;
   left: 50%;
   bottom: 0.5%;
@@ -11,9 +20,43 @@
 #focus-frame {
   width: 600rpx;
   height: 600rpx;
-  position: absolute;
-  left: 50%;
-  top: 45%;
-  transform: translate(-50%, -50%);
 }
 
+.img-category {
+  width: 20%; 
+  margin-top: 40rpx;
+  animation: 0.5s slide-bottom;
+}
+
+@keyframes slide-bottom {
+  0% {
+      opacity: 0;
+      transform: translateY(100%)
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0)
+  }
+}
+
+.photo-garbage {
+  width: 70%; 
+  margin: 0 auto;
+  border-radius: 2%;
+}
+
+.btn-back {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 40rpx;
+  background-color: green;
+  border-radius: 40rpx;
+  color: white;
+}
+
+.btn-back image {
+  width: 50rpx; 
+  height: 50rpx;
+  margin-right: 10rpx;
+}
