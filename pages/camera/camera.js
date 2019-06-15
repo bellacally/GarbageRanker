@@ -1,11 +1,20 @@
+
 Page({
   data: {
-    cameraOn: true
+    cameraOn: true,
+    trashCategories: [
+      { name: "dry", src: "/audios/dry.mp3",  },
+      { name: "wet", src: "/audios/wet.mp3" },
+      { name: "recyclable", src: "/audios/recyclable.mp3" },
+      { name: "hazardous", src: "/audios/hazardous.mp3" },
+    ]
   },
 
   shutterClicked: function() {
-    let page = this
-    let camera = wx.createCameraContext()
+    let page = this;
+    let audioList = page.data.audioList
+    let camera = wx.createCameraContext();
+    let audio = wx.createInnerAudioContext(); 
     camera.takePhoto({
       quality: 'high',
       success: (res) => {
@@ -13,9 +22,8 @@ Page({
           cameraOn: false,
           imgUrl: res.tempImagePath
         })
-        // this.setData({
-        //   src: res.tempImagePath,//保存拍摄路径
-        // })
+        audio.autoplay = true
+        audio.src = trashCategories[0].src
       }
     })
   }
