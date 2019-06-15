@@ -1,5 +1,7 @@
 {
-  "pages": [
+
+  "pages":[
+
     "pages/landing/landing",
     "pages/camera/camera"
   ],

@@ -1,66 +1,24 @@
-// pages/camera/camera.js
+
 Page({
-
-  /**
-   * Page initial data
-   */
   data: {
-
+    cameraOn: true
   },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function () {
+  shutterClicked: function() {
+    let page = this
+    let camera = wx.createCameraContext()
+    camera.takePhoto({
+      quality: 'high',
+      success: (res) => {
+        page.setData({
+          cameraOn: false,
+          imgUrl: res.tempImagePath
+        })
+        // this.setData({
+        //   src: res.tempImagePath,//保存拍摄路径
+        // })
+      }
+    })
 
   }
 })
