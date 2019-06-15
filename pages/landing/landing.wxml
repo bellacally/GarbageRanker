@@ -1,17 +1,11 @@
+<view id="cover_pic" style="background-image: linear-gradient(#fff,rgba(1,100,180,0.2),rgba(0,0,0,0.2) 70%), url('https://cloud-minapp-28142.cloud.ifanrusercontent.com/1hc0pLT3SsHDOgd5.jpg'); background-size:cover; ">
 
-  <view id="cover_pic" style="background-image: linear-gradient(#fff,rgba(1,100,180,0.2),rgba(0,0,0,0.2) 70%), url('https://cloud-minapp-28142.cloud.ifanrusercontent.com/1hc0pLT3SsHDOgd5.jpg'); background-size:cover; ">
-    <view class="content">
-      <image id="logo" src=''></image>
-    </view>
-  </view>
   <view class="container">
-    <view class="line">
-      Learn to
-      <text class="highlighted highlighted-red">sort</text>
-      ,
-    </view>
-    <view class="line">Change your life.</view>
+    <text class="line">
+      Learn to sort </text>
+    <text class="line">Make an impact</text>
     <button class='cta_primary' open-type="getUserInfo" bindgetuserinfo="getUserInfo">
-      Make a impact, start small
+     start small
     </button>
+  </view>
   </view>
