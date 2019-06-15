@@ -11,10 +11,7 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (options) {
-
-  },
-
+  onLoad: function (options) {},
   /**
    * Lifecycle function--Called when page is initially rendered
    */
@@ -26,7 +23,13 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    wx.request({
+      url: 'http://localhost:3000/uploadpic',
+      method: 'POST', 
+      success(res) {
+        console.log(res)
+      }
+    })
   },
 
   /**
@@ -36,9 +39,6 @@ Page({
 
   },
 
-  /**
-   * Lifecycle function--Called when page unload
-   */
   onUnload: function () {
 
   },
