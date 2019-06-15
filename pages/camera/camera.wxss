@@ -1,1 +1,17 @@
-/* pages/camera/camera.wxss */
+#btn-shutter {
+  width: 120rpx;
+  height: 120rpx;
+  position: absolute;
+  left: 50%;
+  bottom: 0.5%;
+  transform: translate(-50%, -50%);
+}
+
+#focus-frame {
+  width: 600rpx;
+  height: 600rpx;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+}
