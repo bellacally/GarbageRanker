@@ -8,16 +8,15 @@
     </cover-view>
   </camera>
 
-  <image src="{{imgUrl}}" mode="widthFix" class="photo-garbage" wx:if="{{imgUrl && !cameraOn}}">
-  </image>
 
+    <image src="{{imgUrl}}" mode="widthFix" class="photo-garbage" wx:if="{{imgUrl && !cameraOn}}">
+    </image>
+    
+    <image src="{{garbageImgUrl}}" mode="widthFix" class="img-category animated infinite pulse" wx:if="{{garbageImgUrl && !cameraOn}}"></image>
 
-  <image src="{{garbageImgUrl}}" mode="widthFix" class="img-category" wx:if="{{garbageImgUrl && !cameraOn}}"></image>
-
-  <view class="btn-back" bindtap="openCamera" wx:if="{{!cameraOn}}">
-    <image src="/images/camera.svg"></image>
-    <text>继续识别</text>
-  </view>
-
+    <view class="btn-back" bindtap="openCamera" wx:if="{{!cameraOn}}">
+      <image src="/images/camera.svg"></image>
+      <text>继续识别</text>
+    </view>
 
 </view> 

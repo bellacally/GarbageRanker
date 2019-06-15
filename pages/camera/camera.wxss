@@ -1,3 +1,7 @@
+.container {
+  position: relative;
+}
+
 .focus-container {
   position: absolute;
   left: 50%;
@@ -23,27 +27,60 @@
 }
 
 .img-category {
-  width: 20%; 
+  width: 40%; 
   margin-top: 40rpx;
   animation: 0.5s slide-bottom;
+  position: absolute;
+  bottom: 20%;
+  z-index: 20;
+}
+
+.animated {
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+}
+
+.infinite {
+  animation-iteration-count: infinite;
+}
+
+.pulse {
+  animation-name: pulse;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
 }
 
 @keyframes slide-bottom {
   0% {
-      opacity: 0;
-      transform: translateY(100%)
+    opacity: 0;
+    transform: translateY(100%)
   }
 
   100% {
-      opacity: 1;
-      transform: translateY(0)
+    opacity: 1;
+    transform: translateY(0)
   }
 }
 
+.img-container {
+  width: 100%;
+  position: relative;
+}
+
 .photo-garbage {
-  width: 70%; 
-  margin: 0 auto;
-  border-radius: 2%;
+  width: 100%; 
 }
 
 .btn-back {
@@ -53,6 +90,8 @@
   background-color: green;
   border-radius: 40rpx;
   color: white;
+  bottom: 10%;
+  position: absolute;
 }
 
 .btn-back image {
