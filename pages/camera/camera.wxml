@@ -20,5 +20,5 @@
       <image src="/images/camera.png"></image>
       <text>继续识别</text>
     </view>
-
 </view> 
+{{result}}

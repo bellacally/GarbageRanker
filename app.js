@@ -15,5 +15,4 @@ App({
       console.log(err)
     })
   }
-
 })

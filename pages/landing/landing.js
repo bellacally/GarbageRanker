@@ -5,6 +5,6 @@ Page({
     wx.navigateTo({
       url: "../camera/camera"
     });
-   
   }
+
 })

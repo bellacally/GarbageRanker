@@ -9,7 +9,8 @@ Page({
       { name: "recyclable", audioSrc: "/audios/recyclable.mp3" },
       { name: "hazardous", audioSrc: "/audios/hazardous.mp3" },
     ],
-    garbageImgUrl: ''
+    garbageImgUrl: '', 
+    result: ''
   },
 
   shutterClicked: function() {
@@ -28,7 +29,8 @@ Page({
         let fileParams = { filePath: res.tempImagePath };
         let metaData = { categoryName: 'Garbage' };
         MyFile.upload(fileParams, metaData).then(res => {
-          console.log(res)
+          let imgPath = res.data.path
+          page.classifyImage(imgPath)
         })
         audio.autoplay = true;
         audio.src = trashCategories[0].audioSrc;
@@ -36,9 +38,31 @@ Page({
     })
   },
 
+  classifyImage: function(imgPath) {
+    let self = this
+    let url = 'http://localhost:3000/upload?imgPath=' + imgPath
+    wx.request({
+      url: url,
+      method: 'POST',
+      header: {
+        'content-type': 'application/json'
+      },
+      data: {
+        imgUrl: imgPath
+      },
+      success(res) {
+        console.log(res)
+        self.setData({
+          result: res.data.images[0].classifiers[0].classes[0].class
+        })
+      }
+    })
+  },
+
   openCamera: function () {
     this.setData({
-      cameraOn: true
+      cameraOn: true, 
+      result: ''
     })
   }
 })
