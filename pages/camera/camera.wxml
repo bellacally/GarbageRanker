@@ -11,6 +11,8 @@
 
     <image src="{{imgUrl}}" mode="widthFix" class="photo-garbage" wx:if="{{imgUrl && !cameraOn}}">
     </image>
+
+    <view class="photo-layer" wx:if="{{imgUrl && !cameraOn}}"></view>
     
     <image src="{{garbageImgUrl}}" mode="widthFix" class="img-category animated infinite pulse" wx:if="{{garbageImgUrl && !cameraOn}}"></image>
 
