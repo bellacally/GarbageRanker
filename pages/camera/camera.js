@@ -4,7 +4,7 @@ Page({
   data: {
     cameraOn: true,
     trashCategories: [
-      { name: "dry", audioSrc: "/audios/dry.mp3", garbageImgUrl: "/images/hazardous.png" },
+      { name: "dry", audioSrc: "/audios/dry.mp3", garbageImgUrl: "/images/hazardous2.png" },
       { name: "wet", audioSrc: "/audios/wet.mp3" },
       { name: "recyclable", audioSrc: "/audios/recyclable.mp3" },
       { name: "hazardous", audioSrc: "/audios/hazardous.mp3" },
