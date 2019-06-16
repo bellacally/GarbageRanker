@@ -39,7 +39,7 @@ Page({
 
   classifyImage: function(imgPath) {
     let self = this
-    let url = 'http://localhost:3000/upload?imgPath=' + imgPath
+    let url = 'https://watson-image-recognition.leanapp.cn/upload?imgPath=' + imgPath
     wx.request({
       url: url,
       method: 'POST',
