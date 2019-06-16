@@ -12,7 +12,8 @@ Page({
     iconUrl: '',
     imgUrl: '',
     showToast: false,
-    showRetake: false
+    showRetake: false,
+    audioSrc: ''
   },
 
   shutterClicked: function() {
@@ -54,14 +55,14 @@ Page({
         let result = res.data.images[0].classifiers[0].classes[0].class
         let garbageCategory = self.data.trashCategories.find(t => (t.name === result))
         self.setData({
-          iconUrl: garbageCategory.iconUrl
-        })
+          iconUrl: garbageCategory.iconUrl,
+          audioSrc: garbageCategory.audioSrc
+        });
         self.setData({
           showToast: false,
           showRetake: true,
-        })
-        let audioSrc = garbageCategory.audioSr
-        self.playAudio(audioSrc);
+        });
+        self.playAudio(self.data.audioSrc);
       }
     })
   },
@@ -71,7 +72,8 @@ Page({
       cameraOn: true, 
       iconUrl: '',
       showRetake: false,
-      imgUrl: ''
+      imgUrl: '',
+      audioSrc: ''
     })
   },
 
